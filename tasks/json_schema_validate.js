@@ -13,7 +13,7 @@ module.exports = function (grunt) {
     // Please see the Grunt documentation for more information regarding task
     // creation: http://gruntjs.com/creating-tasks
 
-    grunt.registerMultiTask('json_schema_validator', 'A grunt plugin to validate json files against given json-schema(s)', function () {
+    grunt.registerMultiTask('json_schema_validate', 'A grunt plugin to validate json files against given json-schema(s)', function () {
         var fs = require('fs'),
             Validator = require('jsonschema').Validator,
             validator = new Validator(),

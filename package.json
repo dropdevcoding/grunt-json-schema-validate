@@ -1,23 +1,23 @@
 {
-  "name": "grunt-json-schema-validator",
+  "name": "grunt-json-schema-validate",
   "description": "A grunt plugin to validate json files against given json-schema(s)",
   "version": "0.1.0",
-  "homepage": "https://github.com/dropdevcoding/grunt-json-schema-validator",
+  "homepage": "https://github.com/dropdevcoding/grunt-json-schema-validate",
   "author": {
     "name": "dropdevcoding",
     "email": "peter.hildenbrand@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/dropdevcoding/grunt-json-schema-validator.git"
+    "url": "git://github.com/dropdevcoding/grunt-json-schema-validate.git"
   },
   "bugs": {
-    "url": "https://github.com/dropdevcoding/grunt-json-schema-validator/issues"
+    "url": "https://github.com/dropdevcoding/grunt-json-schema-validate/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/dropdevcoding/grunt-json-schema-validator/blob/master/LICENSE-MIT"
+      "url": "https://github.com/dropdevcoding/grunt-json-schema-validate/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
