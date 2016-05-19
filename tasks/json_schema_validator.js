@@ -18,9 +18,9 @@ module.exports = function (grunt) {
             Validator = require('jsonschema').Validator,
             validator = new Validator(),
             options = this.options(),
-            schemas = [];
+            schemas = {};
 
-        if (!options.schemas || !options.schemas.length) {
+        if (!options.schemas || !Object.keys(options.schemas)) {
             grunt.log.error('No schemas given in options.schemas');
             return;
         }
@@ -40,14 +40,14 @@ module.exports = function (grunt) {
         this.files.forEach(function (file) {
             var usedSchemaUri = file.dest;
 
-            if (schemas.indexOf(usedSchemaUri) < 0) {
+            if (!schemas[usedSchemaUri]) {
                 grunt.log.error('Schema for schema URI ' + file.dest + ' has not been defined in options.schemas');
                 return;
             }
 
-            grunt.log.subhead('Appling schema ' + usedSchemaUri);
-
             file.src.forEach(function (src) {
+                grunt.log.subhead('Validating file ' + src + ' using schema ' + usedSchemaUri + '...');
+
                 var contents = grunt.file.readJSON(src),
                     result = validator.validate(contents, schemas[usedSchemaUri]);
 
